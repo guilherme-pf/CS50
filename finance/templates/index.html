@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Symbols</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for i in database %}
+            <tr>
+                <td>{{ i["symbol"] }}</td>
+                <td>{{ i["shares"] }}</td>
+                <td>{{ i["price"] | usd }}</td>
+                <td>{{ (i["price"] * i["shares"]) | usd }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <td></td>
+        <td></td>
+        <th scope="2">Cash</td>
+        <td scope="2">{{ cash | usd }}</td> <!-- usd format -->
+    </tfoot>
+  </table>
+{% endblock %}

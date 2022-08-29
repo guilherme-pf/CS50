@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: It is the longest to sort the reversed50000 list, where the last number on the list must be "brought" to the firts place, and the bubble sorting method is the least efficient on this situation.
+
+sort2 uses: merge sort
+
+How do you know?: For the random50000 and reversed50000 sorted txt, it is the fastest one to do so on both cases, implying that it is the most efficient method on a large scale.
+
+sort3 uses: selection sort
+
+How do you know?: It takes aprox. 3,5 seconds to sort all three types of 50000 lists, implying that it has to go through the entire list no matter the order of the original numbers.
